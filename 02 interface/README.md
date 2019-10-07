@@ -1,4 +1,5 @@
-### Interface
+## Interface
+
 An **interface** is a **programming** structure/syntax that allows the computer to enforce certain properties on an object (class).
 
 In Go, the primary job of an **interface** is to provide method signatures consisting of the method name, input arguments and return types. It is up to a Type (e.g. struct type) to declare methods and implement them.
