@@ -1,6 +1,6 @@
-### Goroutine
+## Goroutine
 
-	####  Creating a GoRoutine
+####  Creating a GoRoutine
 
 In the snippet below, `count("chair")` is a blocking call and will keep printing `chair`, and the program will never get to `count("table")` .
 ```
