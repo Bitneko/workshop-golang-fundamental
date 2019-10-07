@@ -96,6 +96,8 @@ A Goroutine has the following advantage over a OS thread
 - Switching between Goroutines is more efficient than thread as they run on 1 thread per Goroutine, and are cooperatively scheduled, so another is not scheduled until current Goroutine is unblocked. Scheduler typically needs to save/restore more than 50 registers switching between threads, compared to just 3 registers(stack pointer, program counter and data register) with Goroutine.
 
 
+
+
 - [Goroutines vs Threads](http://tleyden.github.io/blog/2014/10/30/goroutines-vs-threads/)
 - [X86 Assembly/X86 Architecture](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture)
 
