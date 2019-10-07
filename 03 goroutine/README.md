@@ -1,6 +1,6 @@
-## Goroutine
+# Goroutine
 
-####  Creating a GoRoutine
+##  Creating a GoRoutine
 
 In the snippet below, `count("chair")` is a blocking call and will keep printing `chair`, and the program will never get to `count("table")` .
 ```
@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-#### WaitGroup
+## WaitGroup
 Using `fmt.Scanln()` to block a program is not a very optimise way to block the `main` function as it requires manual input.
 
 `WaitGroup` from the `sync` package that provide basic synchronisation primitives on the other hand give us a more elegant way of managing `GoRoutine`. It is essentially a counter that you increment before spinning a GoRoutine and decrement after the GoRoutine is done running.
@@ -74,7 +74,7 @@ func count(object string) {
 }
 ```
 
-#### Channel
+## Channel
 Channels are a typed conduit through which you can send and receive values with the channel operator, `<-`. It is the de facto mean of communication between GoRoutines in Go.
 
 ```
@@ -105,7 +105,7 @@ func main() {
 }
 ```
 
-##### Deadlock
+## Deadlock
 In the last example, after printing 5 `pen`, a `deadlock` error would happen. This is because although the `count` function has finished executing, the receiver is still waiting to receive from the channel.
 
 To solve this, the channel need to be closed by the sender.
@@ -148,7 +148,7 @@ func main() {
 	}
 }
 ```
-##### Buffer Channel
+## Buffer Channel
 You cannot send a value to a channel before a receiver is declared to receive the value. Doing so will cause an `deadlock` error as the sender will block the program execution preventing the receiver from being declared.
 
 To get around this, you can declare a capacity to the channel as a buffer. Note that if the value sent to the channel exceed the buffer, the `deadlock` will be back.
@@ -170,7 +170,7 @@ func main() {
 	fmt.Println(msg)
 }
 ```
-##### Select Channel
+## Select Channel
 The example below prints `chair` and `table` in sequence even though `table` are set to send values to it's channel at a much faster rate. This is because a receiver is a blocking call, so `fmt.Println(<-c1)` will block after receiving a single value, and will only resume receiving new value after `fmt.Println(<-c2)` is done receiving it's value.
 ```
 func main() {
@@ -218,7 +218,7 @@ func main() {
 }
 ```
 
-####  Worker Pool
+##  Worker Pool
 We'll look at how to implement a work pool using **GoRoutines** and **channels**. A worker pool is simply a pool of GoRoutines that work together to compute a process a list of tasks.
 
 Note that worker pool **does not guarantee** the order of which the task completed.

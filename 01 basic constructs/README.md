@@ -1,6 +1,6 @@
-## Basics Constructs
+# Basics Constructs
 
-#### Anatomy of a Go package
+## Anatomy of a Go package
 Every package being with a main package.
 A import statement to bring in external packages.
 And a `main` function
@@ -17,7 +17,7 @@ func main() {
 }
 ```
 
-#### Variables
+## Variables
 Go variable has a default value when declared without assigning a value. The default value of a `int` is `0`, and the default value of a `string` is a empty string
 ```
 var foo int
@@ -36,7 +36,7 @@ foobar := foo + bar
 fmt.Println(foobar) //Print 13
 ```
 
-#### Condition
+## Condition
 ```
 count := 7
 
@@ -49,7 +49,7 @@ if count > 6 {
 }
 ```
 
-#### Array
+## Array
 Array has a fixed size. When you pass around an array in Go, a new copy of the array is created which could eat up a lot of memory,  however it does has a faster access speed.
 
 Note: Array are actually pretty rare in Go code.
@@ -64,7 +64,7 @@ fmt.Println(foo) //Print {0 0 7 0 0}
 fmt.Println(bar) //Print {1 2 3 4 5}
 ```
 
-#### Slices
+## Slices
 A slice is a reference to a contiguous segment of an array. Slice is basically a pointer, with additional properties about the array.
 
 The zero value of a slice is `nil`.
@@ -88,7 +88,7 @@ foo = append(foo, 6)
 fmt.Println(foo) //Print {1 2 3 4 5 6}
 ```
 
-#### Map
+## Map
 Map types are reference types, like pointers or slices, and so the value of `m` below is `nil` as it doesn't point to an initialised map.
 
 ```
@@ -125,7 +125,7 @@ commits := map[string]int{
 fmt.Println(commits) //Print map[adg:912 gri:1908 r:2138 rsc:3711]
 ```
 
-#### Loops
+## Loops
 
 ```
 sum := 0
@@ -134,7 +134,7 @@ for i := 0; i < 100; i++ {
 }
 ```
 
-#### Range
+## Range
 
 ```
 numbers := []int{1,2,3,4,5}
@@ -144,7 +144,7 @@ for index, number := range numbers {
     fmt.Printf("[%d, %d, %d]\n", index, number, sum)
 ```
 
-#### Struct
+## Struct
 Struct are typed collections of fields
 
 ```
@@ -223,7 +223,7 @@ student4 := &Student{Name: "Matt", Age: 14}
 fmt.Println(student4) //Print &{Matt 14}
 ```
 
-#### Functions
+## Functions
 Functions in Go are first class citizens. They can be assigned to variables, passed as an argument, immediately invoked or deferred for last execution
 
 ```
@@ -259,7 +259,7 @@ addition, multiple := addMulti(5, 3)
 fmt.Println(addition, multiple) //Print 8 15
 ```
 
-- ##### Deferred function
+- ### Deferred function
 A **defer statement** pushes a function call onto a list. The list of saved calls is executed after the surrounding function returns. Defer is commonly used to simplify functions that perform various clean-up actions.
 
 ```
@@ -281,7 +281,7 @@ func CopyFile(destination, source string) (written int64, err error) {
 ```
 
 
-- ##### Variadic function
+- ### Variadic function
 ```
 func sum(nums ...int) {
     fmt.Print(nums, " ")
@@ -304,7 +304,7 @@ sum(nums...) //Print [1 2 3 4] 10
 
 ```
 
-#### Private and Public Visibility
+## Private and Public Visibility
 Exports in Go are controlled by naming convention. A capital letter means something will be exported, and a lowercase letter means it will not be exported, and this convention is applicable to structs and other data, functions, and methods.
 
 ```

@@ -1,4 +1,4 @@
-## Interface
+# Interface
 
 An **interface** is a **programming** structure/syntax that allows the computer to enforce certain properties on an object (class).
 
@@ -6,7 +6,7 @@ In Go, the primary job of an **interface** is to provide method signatures consi
 
 In Go, a user defined struct type is also known as the **Concrete Type**, and **interface** types provide **contracts** to concrete types
 
-#### Basic Implementation
+## Basic Implementation
 ```
 type Shape interface {
     Area() int
@@ -39,7 +39,7 @@ func main() {
 
 ```
 
-#### Multiple Interfaces
+## Multiple Interfaces
 A type can implement multiple interfaces
 
 ```
@@ -75,7 +75,7 @@ func main() {
 }
 ```
 
-#### Empty Interface
+## Empty Interface
 When an interface has zero methods, it is called an **empty interface**. This is represented by `interface{}`. Since empty interface has zero methods, all types implement this interface.
 
 ```
@@ -98,7 +98,7 @@ func main() {
 }
 ```
 
-#### Type Assertion
+## Type Assertion
 We can find out the underlying dynamic value of an interface using the syntax `i.(Type)` where `i` is an interface and `Type` is a type that implements the interface `i`. **Go will check if dynamic type of** `i` **is identical to** `Type`.
 
 ```
@@ -136,7 +136,7 @@ func main() {
 }
 ```
 
-#### Type Switching
+## Type Switching
 **Type switch**. The syntax for type switch is similar to type assertion and it is `i.(type)`where `i` is interface and `type` is a fixed keyword. Using this we can get the concrete type of the interface instead of value. **But this syntax will only work in** **`switch`** **statement**.
 ```
 func explain(i interface{}) {
@@ -157,7 +157,7 @@ func main() {
 }
 ```
 
-#### Embedding Composition
+## Embedding Composition
 In Go, an interface cannot implement other interfaces or extend them, but we can create new interface by merging two or more interfaces.
 ```
 type Shape interface {
@@ -196,7 +196,7 @@ func main() {
 }
 ```
 
-#### Pointer vs Value Receiver
+## Pointer vs Value Receiver
 In struct,  a method with pointer receiver will work on both pointer or value, But in case of interfaces, if a method has a pointer receiver, then the **interface will have a pointer of dynamic type rather than the value of dynamic type**.
 ```
 type Shape interface {
