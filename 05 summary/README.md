@@ -15,8 +15,8 @@ It is syntactically similar to C, and is designed with the following in mind
 
 It is created with memory safety,  garbage collection,  structural typing, and **CSP** style concurrency.
 
-[Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
-[Introduction to Communicating Sequential Processes(CSP)](https://www.youtube.com/watch?v=G9ePu0Nh2BQ)
+- [Type Systems: Structural vs. Nominal typing explained](https://medium.com/@thejameskyle/type-systems-structural-vs-nominal-typing-explained-56511dd969f4)
+- [Introduction to Communicating Sequential Processes(CSP)](https://www.youtube.com/watch?v=G9ePu0Nh2BQ)
 
 ## Composition over inheritance in Go
 > Golang favour composition over inheritance.
@@ -96,8 +96,8 @@ A Goroutine has the following advantage over a OS thread
 - Switching between Goroutines is more efficient than thread as they run on 1 thread per Goroutine, and are cooperatively scheduled, so another is not scheduled until current Goroutine is unblocked. Scheduler typically needs to save/restore more than 50 registers switching between threads, compared to just 3 registers(stack pointer, program counter and data register) with Goroutine.
 
 
-[Goroutines vs Threads](http://tleyden.github.io/blog/2014/10/30/goroutines-vs-threads/)
-[X86 Assembly/X86 Architecture](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture)
+- [Goroutines vs Threads](http://tleyden.github.io/blog/2014/10/30/goroutines-vs-threads/)
+- [X86 Assembly/X86 Architecture](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture)
 
 
 ## Working with Go
@@ -123,5 +123,5 @@ Command line flag parsing. Useful when designing Go application to take in param
 #### Makefile  
 Useful in streamlining repetitive long commands with arguments, or chaining multiple commands into one.
 
-[Using Go modules](https://blog.golang.org/using-go-modules)
-[Go Makefile](https://sohlich.github.io/post/go_makefile/)
+- [Using Go modules](https://blog.golang.org/using-go-modules)
+- [Go Makefile](https://sohlich.github.io/post/go_makefile/)
