@@ -38,7 +38,7 @@ func main() {
 ```
 
 In the following example , the 2 `count` calls will keep running until a manual input is detected by `fmt.Scanln()`
-** Doesn't work in playground
+<br/>** Doesn't work in playground
 ```
 func main() {
 	go count("chair")
@@ -75,7 +75,7 @@ func count(object string) {
 ```
 
 ## Channel
-Channels are a typed conduit through which you can send and receive values with the channel operator, `<-`. It is the de facto mean of communication between GoRoutines in Go.
+Channels are a typed conduit through which you can send and receive values with the channel operator, `<-`. It is the de-facto mean of communication between GoRoutines in Go.
 
 ```
 func main() {
