@@ -205,9 +205,9 @@ type Student struct {
     Age  int
 }
 
-Way to initialise a struct
+// Ways to initialise a struct
 // Using new keywork to initialise
-var student0pa *Student
+var student0 *Student
 student0 = new(Student)
 student0.Name = "Alice"
 fmt.Println(student0) //Print &{ 0} - Age initialised to 0
@@ -216,12 +216,12 @@ fmt.Println(student0) //Print &{ 0} - Age initialised to 0
 student1 := Student{Name: "John", Age: 16}
 fmt.Println(student1) //Print {John 16}
 
-dy", 15}
+student2 := Student{"Wendy", 15}
 fmt.Println(student2) //Print {Wendy 15}
 
-student3 := StudentAlice{}
+student3 := Student{}
 fmt.Println(student3) //Print { 0}
-student2 := Student{"Wen
+
 student4 := &Student{Name: "Matt", Age: 14}
 fmt.Println(student4) //Print &{Matt 14}
 ```
