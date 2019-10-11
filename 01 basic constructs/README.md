@@ -103,6 +103,9 @@ m["route"] = 66
 
 // Remove an entry from the map
 delete(m, "route")
+```
+
+```
 // Retrieving and testing the existence of a key
 i, ok := m["route"]
 fmt.Print(i, ok) //Print 66 true
