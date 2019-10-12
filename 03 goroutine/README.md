@@ -132,6 +132,7 @@ func main() {
 		if !open {
 			break // Break out of the for loop
 		}
+
 		fmt.Println(msg)
 	}
 }
@@ -141,13 +142,14 @@ You can use `range` to iterate through the values of a channel instead of loopin
 ```
 func main() {
 	c:= make(chan string)
-	go count('pen', c)
-	msg := <-c // receiver
+	go count("pen", c)
+
 	for msg := range c {
-		fmt:Println(msg)
+		fmt.Println(msg)
 	}
 }
 ```
+
 ## Buffer Channel
 You cannot send a value to a channel before a receiver is declared to receive the value. Doing so will cause an `deadlock` error as the sender will block the program execution preventing the receiver from being declared.
 
