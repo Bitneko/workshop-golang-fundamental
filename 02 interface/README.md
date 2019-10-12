@@ -230,7 +230,7 @@ func main() {
 ## Pointer vs Value Receiver
 In struct,  a method with pointer receiver will work on both pointer or value, But in case of interfaces, if a method has a pointer receiver, then the **interface will have a pointer of dynamic type rather than the value of dynamic type**.
 
-[Playground example (with assigned pointer)](https://play.golang.org/p/I3l5R1tsCwG)
+[Playground example (with assigned pointer)](https://play.golang.org/p/I3l5R1tsCwG)<br />
 [Playground example (with assigned value)](https://play.golang.org/p/IacrF3PcGCL)
 ```
 type (
